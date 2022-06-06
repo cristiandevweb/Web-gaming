@@ -408,7 +408,7 @@ footer {
   border-bottom: solid 5px;
   border-color: #25C8FF;
 }
-.menu-nav ul { /*--BARRA DE NAVEGACION--*/
+.menu-nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
