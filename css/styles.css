@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+  --color-primario: #25C8FF;
+  --color-secundario: white;
+  --color-oscuro: rgb(22, 22, 22);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap');
 /*---------------------------------------------------------------*/
 /*-----------GRIDS-----------*/
@@ -58,22 +64,22 @@ body {
   }
   .header-superior {
     display: flex;
-    justify-content: space-between;
     width: 90%;
     margin: 0 auto;
   }
     .logo-nombre {   /*--NUBE.PNG--*/
       display: flex;
-      justify-content: flex-start;
       align-items: center;
     }
         .cloud-gaming {   /*--CLOUD GAMING--*/
           text-decoration: none;
-          list-style: none;
-          color: #25C8FF;
+          color: var(--color-primario);
           font-size: xx-large;
           font-weight: bold;
           margin: 10px 0px 10px 0px;
+        }
+        .cloud-gaming a:hover {
+          color: var(--color-primario);
         }
         .barra-busqueda { /*--BARRA BUSQUEDA--*/
           display: flex;
@@ -89,7 +95,7 @@ body {
             width: 60%;
             height: 50px;
             border: solid 3px;
-            border-color: #25C8FF;
+            border-color: var(--color-primario);
           }
           .header-icons {   /*--ICONS.PNG--*/
             display: flex;
@@ -97,8 +103,8 @@ body {
             align-items: center;
           }
           .tamaño-iconos {
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
           }
 
 /*---------------------------------------------------------------*/
@@ -110,11 +116,11 @@ body {
   padding: 15px;
   height: 98%;
   width: 250px;
-  background-color: rgb(22, 22, 22);
-  color: white;
+  background-color: var(--color-oscuro);
+  color: var(--color-secundario);
   border: solid 2px;
   border-radius: 5px;
-  border-color: #25C8FF;
+  border-color: var(--color-primario);
   margin: 30px 0px 0px 0px;
 }
 .banner {
@@ -161,53 +167,58 @@ body {
         text-align: center;
         border-radius: 10px;
         width: 250px;
-        background-color: rgb(22, 22, 22);
+        background-color: var(--color-oscuro);
     }
       .descripcion {
-        text-align: center;
+        display: flex;
+        align-items: flex-start;
+      }
+      .descripcion a {
         text-decoration: none;
         font-weight: bold;
-        color: white;
         padding: 10px;
+        color: var(--color-secundario);
         border-bottom: solid 5px;
-        border-color: #25C8FF;
+        border-color: var(--color-primario);
       }
       .articulos a:hover {
-        color: #25C8FF;
+        color: var(--color-primario);
       }
       .articulos a img {
         width: 250px;
       }
       .precio {
-        margin: 10px 5px 0px 5px;
+        margin: 5px 5px 0px 5px;
         text-align: center;
         font-weight: bold;
         font-size: xx-large;
-        color: white;
+        color: var(--color-secundario);
       }
         
      .cuotas {
-        text-align: center;
         font-weight: bold;
-        color: white;
-        padding: 10px;
+        color: var(--color-secundario);
      }
       .ver-mas {
-        margin: 5px 0px 0px 0px;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        margin: 0px 0px 20px 0px;
+      }
+      .ver-mas a {
         font-size: x-large;
         font-weight: bold;
         text-decoration: none;
-        padding: 5px 0px 0px 0px;
-        background-color: #25C8FF;
-        color: white;
+        padding: 3px 0px 0px 0px;
+        background-color: var(--color-primario);
+        color: var(--color-secundario);
         width: 80%;
-        margin: 0% 5% 5% 10%;
         border-radius: 10px;
       }
 
-        .ver-mas:hover {
-          background-color: white;
-          color: #25C8FF;
+        .ver-mas a:hover {
+          background-color: var(--color-secundario);
+          color: var(--color-primario);
         }
 
 
@@ -215,7 +226,7 @@ body {
 /*-----------FOOTER-----------*/
 footer {
   border-top: solid 5px;
-  border-color: #25C8FF;
+  border-color: var(--color-primario);
   background: rgb(3,18,10);
   background: linear-gradient(90deg, rgba(3,18,10,1) 0%, rgba(81,194,228,0.8477766106442577) 50%, rgba(190,190,190,0.9542191876750701) 100%);
 }
@@ -228,7 +239,7 @@ footer {
       margin: 15px 3vh;
     }
       .separacion a:hover {
-      color: #25C8FF;
+      color: var(--color-primario);
       }
     .sin-estilo li {
       margin: 10px;
@@ -261,9 +272,9 @@ footer {
       text-align: center;
       border-radius: 10px;
       width: 400px;
-      background-color: rgb(22, 22, 22);
+      background-color: var(--color-oscuro);
       border: solid 2px;
-      border-color: #25C8FF;
+      border-color: var(--color-primario);
   }
       .articulos-faq div img {
         width: 96px;
@@ -273,13 +284,13 @@ footer {
           text-decoration: none;
           font-size: larger;
           font-weight: bold;
-          color: white;
+          color: var(--color-secundario);
           padding: 10px 0px 10px 0px;
       }
           
       .descripcion-faq {
           text-align: center;
-          color: white;
+          color: var(--color-secundario);
           padding: 10px;
       }
 /*---------------------------------------------------------------*/
@@ -301,21 +312,21 @@ footer {
       text-align: center;
       border-radius: 10px;
       width: 70%;
-      background-color: rgb(22, 22, 22);
+      background-color: var(--color-oscuro);
       border: solid 2px;
-      border-color: #25C8FF;
+      border-color: var(--color-primario);
     }
       .titulo-contacto {
         text-align: center;
         text-decoration: none;
         font-size: larger;
         font-weight: bold;
-        color: white;
+        color: var(--color-secundario);
         padding: 10px 0px 10px 0px;
       }
       .descripcion-contacto {
         text-align: center;
-        color: white;
+        color: var(--color-secundario);
         padding: 10px;
       }
       .formulario {
@@ -324,13 +335,13 @@ footer {
         border-radius: 10px;
         border: solid 2px;
         width: 60%;
-        border-color: #25C8FF;
+        border-color: var(--color-primario);
         color: rgb(128, 128, 128);
-        background-color: rgb(22, 22, 22);
+        background-color: var(--color-oscuro);
         font-family: 'Roboto' sans-serif;
       }
       .formulario:hover {
-        border-color: white;
+        border-color: var(--color-secundario);
       }
       .textarea {
         padding: 10px;
@@ -342,9 +353,9 @@ footer {
         width: 60%;
         border-radius: 10px;
         border: solid 2px;
-        border-color: #25C8FF;
+        border-color: var(--color-primario);
         color: rgb(128, 128, 128);
-        background-color: rgb(22, 22, 22);
+        background-color: var(--color-oscuro);
         font-family: 'Roboto' sans-serif;
       }
       .checkbox {
@@ -364,14 +375,14 @@ footer {
         font-size: larger;
         font-weight: bold;
         width: 60%;
-        border-color: #25C8FF;
-        color: white;
-        background-color: #25C8FF;
+        border-color: var(--color-primario);
+        color: var(--color-secundario);
+        background-color: var(--color-primario);
         font-family: 'Roboto' sans-serif;
       }
       .enviar:hover {
-        background-color: white;
-        color: #25C8FF;
+        background-color: var(--color-secundario);
+        color: var(--color-primario);
         cursor: pointer;
       }
 
@@ -379,7 +390,7 @@ footer {
 /*-----------FUENTES----------*/
 .x-large {
     font-size: x-large;
-    color:#25C8FF;
+    color:var(--color-primario);
     font-weight: normal;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
 }
@@ -389,7 +400,7 @@ footer {
 .sin-estilo {
     text-decoration: none;
     list-style: none;
-    color: white;
+    color: var(--color-secundario);
 }
 
 
@@ -406,7 +417,10 @@ footer {
 /*-----------HEADER-----------*/
 .header-flex {
   border-bottom: solid 5px;
-  border-color: #25C8FF;
+  border-color: var(--color-primario);
+}
+.nav-smartphone {
+  display: none;
 }
 .menu-nav ul {
   display: flex;
@@ -415,7 +429,7 @@ footer {
   width: 100%;
   height: 36px;
   list-style: none;
-  background-color: #25C8FF;
+  background-color: var(--color-primario);
 }
   .menu-button a {
     display: flex;
@@ -423,16 +437,16 @@ footer {
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    color: white;
+    color: var(--color-secundario);
     padding: 8px 15px;
     height: 100%;
     transition: 0.3s;
   }
   .menu-button a:hover{
     background-color: #ffffff;
-    color: #25C8FF;
+    color: var(--color-primario);
     border-radius: 5px;
-    border-color: #25C8FF;
+    border-color: var(--color-primario);
     padding: 16px 15px;
     -webkit-animation: 0.3s linear both;
     animation: slide-top 0.3s linear both;
@@ -455,38 +469,41 @@ footer {
 /*-----------MAIN-----------*/
 .titulo-flex { /*--TITULO MAIN--*/
   display: flex;
-  justify-content: flex-start;
   margin: 0% 0% 0% 10%;
-  align-items: center;
   font-size: x-large;
-  color: white;
-  padding: 30px 0px 0px 0px;
-}
+  color: var(--color-secundario);
+  padding: 20px 0px 0px 0px;
+  }
+  .articulos-titulo {
+    padding: 6px 0px 0px 0px;
+  }
   .titulo {
-    text-align: center;
     font-weight: bold;
     font-size: xx-large;
-    color: white;
+    color: var(--color-secundario);
     margin: 0px 15px;
   }
 }
 
 /*---------------------------------------------------------------*/
 /*-----------TABLET----------*/
-@media (min-width: 625px) and (max-width: 1023px) {
+@media (min-width: 731px) and (max-width: 1023px) {
 /*-----------HEADER-----------*/
   .header-flex {
     border-bottom: solid 5px;
-    border-color: #25C8FF;
+    border-color: var(--color-primario);
   }
-  .menu-nav ul { /*--BARRA DE NAVEGACION--*/
+  .nav-smartphone{
+    display: none;
+  }
+  .menu-nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 24px;
+    height: 36px;
     list-style: none;
-    background-color: #25C8FF;
+    background-color: var(--color-primario);
   }
     .menu-button a {
       display: flex;
@@ -494,32 +511,50 @@ footer {
       text-decoration: none;
       font-size: 16px;
       font-weight: bold;
-      color: white;
-      padding: 0px 15px;
+      color: var(--color-secundario);
+      padding: 8px 15px;
+      height: 100%;
+      transition: 0.3s;
     }
     .menu-button a:hover{
-      background-color: #25C8FF;
-      border-bottom: solid 5px;
-      border-top: solid 10px;
+      background-color: #ffffff;
+      color: var(--color-primario);
       border-radius: 5px;
-      border-color: #25C8FF;
+      border-color: var(--color-primario);
+      padding: 16px 15px;
+      -webkit-animation: 0.3s linear both;
+      animation: slide-top 0.3s linear both;
+      transform: scale(1.5);
     }
-
-/*-----------BODY-----------*/
+      @keyframes slide-top {
+        0% {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+        50% {
+          -webkit-transform: translateY(-12px);
+                  transform: translateY(-12px);
+        }
+        100% {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+/*-----------MAIN-----------*/
 .titulo-flex { /*--TITULO MAIN--*/
   display: flex;
-  justify-content: flex-start;
   margin: 0% 0% 0% 10%;
-  align-items: center;
   font-size: x-large;
-  color: white;
-  padding: 30px 0px 0px 0px;
+  color: var(--color-secundario);
+  padding: 20px 0px 0px 0px;
 }
+  .articulos-titulo {
+    padding: 6px 0px 0px 0px;
+  }
   .titulo {
-    text-align: center;
     font-weight: bold;
     font-size: xx-large;
-    color: white;
+    color: var(--color-secundario);
     margin: 0px 15px;
   }
 .menu-lat {
@@ -536,22 +571,22 @@ footer {
 .articulos { /*--CAJAS DE PUBLICACIONES--*/
   margin: 5px;
   border-radius: 10px;
-  width: 100px;
+  width: 200px;
 }
 .articulos a img {
-  width: 100px;
+  width: 200px;
 }
-.descripcion {
-  border-bottom: solid 14px;
-  border-color: #25C8FF;
+.descripcion a {
+  border-bottom: solid 10px;
+  border-color: var(--color-primario);
+  padding: 10px;
 }
 .precio {
   font-size: x-large;
 }
-.ver-mas {
+.ver-mas a {
   padding: 6px 0px 2px 0px;
-  margin-bottom: 15px;
-  font-size: 10px;
+  font-size: 20px;
 }
 /*-----------FOOTER-----------*/
 .padre1 {
@@ -569,43 +604,47 @@ footer {
 }
 /*---------------------------------------------------------------*/
 /*-----------SMARTPHONE----------*/
-@media (min-width: 392px) and (max-width: 624px) {
+@media (min-width: 392px) and (max-width: 730px) {
 /*-----------HEADER-----------*/
 .cloud-gaming {
   display: none;
 }
 .menu-nav ul { /*--BARRA DE NAVEGACION--*/
+  display: none;
+}
+.color-nav-mobile {
+  background-color: var(--color-primario);
+}
+.sin-borde {
+  border: none;
+}
+.menu-mobile a {
   display: flex;
-  flex-direction: column;
-  background-color: #25C8FF;
+  justify-content: center;
+  color: var(--color-secundario);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 14px 0px 14px 0px;
 }
-.menu-mobile {
-  margin: 14px 0px 14px 0px;
-}
-  .menu-mobile a {
-    display: flex;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 10px;
+  .navbar-light .navbar-toggler-icon {
+    background-image: url(../images/icon/more.png); /*-----------CAMBIE ICONO DE HAMBURGUESA DEL MENU BOOTSTRAP------------------------------*/
   }
-
 /*-----------MAIN-----------*/
 
 .titulo-flex { /*--TITULO MAIN--*/
   display: flex;
-  justify-content: flex-start;
   margin: 0% 0% 0% 3%;
-  align-items: center;
-  color: white;
-  padding: 100px 0px 0px 0px;
+  color: var(--color-secundario);
+  padding: 20px 0px 0px 0px;
 }
+  .articulos-titulo {
+    padding: 2px 0px 0px 0px;
+  }
   .titulo {
-    text-align: center;
     font-weight: bold;
     font-size: larger;
-    color: white;
+    color: var(--color-secundario);
     margin: 0px 10px;
   }
   .menu-lat {
@@ -618,17 +657,18 @@ footer {
   .articulos a img {
     width: 150px;
   }
-  .descripcion {
-    border-bottom: solid 14px;
-    border-color: #25C8FF;
+  .descripcion a {
+    border-bottom: solid 10px;
+    border-color: var(--color-primario);
+    padding: 5px;
   }
   .precio {
     font-size: x-large;
   }
-  .ver-mas {
-    padding: 6px 0px 2px 0px;
-    margin-bottom: 15px;
-    font-size: 10px;
+
+  .ver-mas a {
+    padding: 4px 0px 2px 0px;
+    font-size: 17px;
   }
 /*-----------FOOTER-----------*/
   .padre1 {
@@ -646,7 +686,12 @@ footer {
     margin: 0 auto;
     width: 100%;
   }
-
+  .ver-mas {
+    padding: 4px 2px 4px 2px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
   /*-----------FOOTER-----------*/
 .articulos-contacto {
   width: 100%;
@@ -679,39 +724,43 @@ footer {
   display: none;
 }
 .menu-nav ul { /*--BARRA DE NAVEGACION--*/
-  display: flex;
-  flex-direction: column;
-  background-color: #25C8FF;
+  display: none;
 }
-.menu-mobile {
-  margin: 14px 0px 14px 0px;
+.color-nav-mobile {
+  background-color: var(--color-primario);
+}
+.sin-borde {
+  border: none;
 }
   .menu-mobile a {
     display: flex;
     justify-content: center;
-    color: white;
+    color: var(--color-secundario);
     text-decoration: none;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 20px;
+    padding: 14px 0px 14px 0px;
   }
-
+  .navbar-light .navbar-toggler-icon {
+    background-image: url(../images/icon/more.png); /*-----------CAMBIE ICONO DE HAMBURGUESA DEL MENU BOOTSTRAP------------------------------*/
+  }
 /*-----------MAIN-----------*/
 
 .titulo-flex { /*--TITULO MAIN--*/
 display: flex;
-justify-content: flex-start;
 margin: 0% 0% 0% 3%;
-align-items: center;
-color: white;
-padding: 100px 0px 0px 0px;
+color: var(--color-secundario);
+padding: 20px 0px 0px 0px;
 }
-.titulo {
-  text-align: center;
-  font-weight: bold;
-  font-size: larger;
-  color: white;
-  margin: 0px 10px;
-}
+  .articulos-titulo {
+    padding: 2px 0px 0px 0px;
+  }
+  .titulo {
+    font-weight: bold;
+    font-size: larger;
+    color: var(--color-secundario);
+    margin: 0px 10px;
+  }
 .menu-lat {
   display: none;
 }
@@ -722,10 +771,11 @@ padding: 100px 0px 0px 0px;
 .articulos a img {
   width: 100px;
 }
-.descripcion {
-  border-bottom: solid 14px;
-  border-color: #25C8FF;
+.descripcion a {
+  border-bottom: solid 10px;
+  border-color: var(--color-primario);
   font-size: 14px;
+  padding: 4px;
 }
 .precio {
   font-size: larger;
@@ -734,9 +784,12 @@ padding: 100px 0px 0px 0px;
   font-size: 15px;
 }
 .ver-mas {
+  margin: 0;
+}
+.ver-mas a {
   padding: 4px 2px 4px 2px;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 5px;
 }
 /*-----------FOOTER-----------*/
