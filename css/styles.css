@@ -9,7 +9,7 @@
 :root {
   --color-primario: #25C8FF;
   --color-secundario: white;
-  --color-oscuro: rgb(22, 22, 22);
+  --color-oscuro: rgba(22, 22, 22, 0.8);
 }
 
 /*---------------------------------------------------------------*/
@@ -148,7 +148,7 @@ body {
   background-color: rgb(44, 44, 44);
   background-attachment: fixed;
   background-size: cover;
-  background-image: url(../images/images/abstract-blue-line-speed-dynamic-on-black-background-illustration-vector_waifu2x_art_noise3_scale_tta_1.png);
+  background-image: url(../images/images/abstract-blue-line-speed-dynamic-on-black-background-illustration-vector_waifu2x_art_noise3_scale_tta_1-min.jpg);
   width: 100%;
   height: 100vh;
 }
