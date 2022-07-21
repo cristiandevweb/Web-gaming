@@ -15,11 +15,16 @@
   .busqueda-none2 {
       display: none;
     }
+  .header-superior {
+    justify-content: space-around;
+  }
   .barra-busqueda {
-      width: 100%;
-      margin-right: 5%;
       margin-left: 30px;
     }
+  .header-icons {
+    position: relative;
+    right: 12%;
+  }
   .menu-mobile {
       display: flex;
       justify-content: center;
