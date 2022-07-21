@@ -1,18 +1,20 @@
+// TIPOGRAFIA Y RESET
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+// FIN RESET
+// VARIABLES
 :root {
   --color-primario: #25C8FF;
   --color-secundario: white;
   --color-oscuro: rgba(22, 22, 22, 0.8);
+  --gradiente-b: linear-gradient(56deg, rgba(0,132,176,1) 0%, rgba(11,11,11,0.8953956582633054) 50%, rgba(32,32,32,1) 100%);
 }
-
-/*---------------------------------------------------------------*/
-/*-----------GRIDS-----------*/
+// FIN VARIABLES
+// GRIDS
 #grids {
   display: grid;
   grid-template-columns: 1fr;
@@ -35,18 +37,4 @@
             grid-area: pie;
         }
 }
-/*-----------FUENTES----------*/
-.x-large {
-    font-size: x-large;
-    color:var(--color-primario);
-    font-weight: normal;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
-}
-.bold {
-    font-weight: bold;
-}
-.sin-estilo {
-    text-decoration: none;
-    list-style: none;
-    color: var(--color-secundario);
-}
+// FIN

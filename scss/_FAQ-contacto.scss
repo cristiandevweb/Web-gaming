@@ -1,3 +1,4 @@
+// CONTACTO
 .publicaciones-contacto {
     width: 1100px;
     display: flex;
@@ -90,7 +91,8 @@
                   cursor: pointer;
               }
           }
-/*-----------FAQ-----------*/
+// FIN CONTACTO
+// FAQ
 .publicaciones-faq {
     width: 80%;
     display: flex;
@@ -102,9 +104,11 @@
     .articulos-faq {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         margin: 10px;
         text-align: center;
         border-radius: 10px;
+        min-height: 500px;
         width: 30%;
         min-width: 350px;
         background-color: var(--color-oscuro);
@@ -129,3 +133,8 @@
             color: var(--color-secundario);
             padding: 10px;
         }
+
+        .marginbottom-faq {
+          margin-bottom: 20px;
+        }
+// FIN FAQ

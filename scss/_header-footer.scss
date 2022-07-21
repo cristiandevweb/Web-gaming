@@ -1,29 +1,33 @@
-/*-----------HEADER-----------*/
+// HEADER
+header {
+  z-index: 50;
+}
   .header-flex2 {
       background: rgb(3,18,10);
-      background: linear-gradient(90deg, rgba(3,18,10,1) 0%, rgba(81,194,228,0.8477766106442577) 50%, rgba(190,190,190,0.9542191876750701) 100%);  
+      background: var(--gradiente-b);
     }
     .header-superior {
         display: flex;
         width: 90%;
         margin: 0 auto;
       }
-      .logo-nombre {   /*--NUBE.PNG--*/
+      .logo-nombre {
           display: flex;
           align-items: center;
         }
-          .cloud-gaming {   /*--CLOUD GAMING--*/
+          .cloud-gaming {
               text-decoration: none;
               color: var(--color-primario);
               font-size: xx-large;
               font-weight: bold;
               margin: 10px 0px 10px 0px;
+              width: 203px;
               & a:hover {
                   color: var(--color-primario);
                 }
             }
 
-          .barra-busqueda { /*--BARRA BUSQUEDA--*/
+          .barra-busqueda {
               display: flex;
               justify-content: center;
               align-items: center;
@@ -31,30 +35,50 @@
               width: 100%;
               & input {
                   padding: 15px;
+                  margin-right: 22%;
                   border-radius: 10px;
                   min-width: 5%;
-                  width: 60%;
+                  width: 100%;
                   height: 50px;
                   border: solid 3px;
                   border-color: var(--color-primario);
                 }
             }
 
-            .header-icons {   /*--ICONS.PNG--*/
+            .header-icons {
                 display: flex;
-                flex-direction: row;
                 align-items: center;
+                position: relative;
+                right: 12vh;
+                & div {
+                  display: flex;
+                  width: 120px;
+                }
               }
-            .tamaño-iconos {
+            .iconos {
                 width: 50px;
                 height: 50px;
+                cursor: pointer;
               }
-/*-----------FOOTER-----------*/
+
+.estilo-d-header {
+  height: 164px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & p {
+  font-weight: bold;
+  color: var(--color-secundario);
+  font-size: larger;
+  }
+}
+// FIN HEADER
+// FOOTER
 footer {
     border-top: solid 5px;
     border-color: var(--color-primario);
     background: rgb(3,18,10);
-    background: linear-gradient(90deg, rgba(3,18,10,1) 0%, rgba(81,194,228,0.8477766106442577) 50%, rgba(190,190,190,0.9542191876750701) 100%);
+    background: var(--gradiente-b);
   }
 
   .padre1 {
@@ -62,22 +86,41 @@ footer {
       justify-content: center;
     }
     .separacion {
-      margin: 15px 3vh;
+      padding: 10%;
       & a:hover {
           color: var(--color-primario);
         }
     }
-  
+    .separacion2 {
+      padding: 3%;
+    }
+.sin-estilo {
+    padding: 0;
+    margin: 0;
+  }
     .sin-estilo li {
-        margin: 10px;
-        text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+        margin: 5px;
+        font-weight: bold;
       }
       .seguinos {
           text-align: center;
-          margin: 10px;
           text-decoration: none;
+          width: 100%;
         }
   .mobile {
       display: flex;
     }
-  
+
+  .x-large {
+      font-size: x-large;
+      font-weight:bold;
+      color:var(--color-primario);
+      margin-bottom: 0;
+    }
+  .sin-estilo {
+      text-decoration: none;
+      list-style: none;
+      color: var(--color-secundario);
+      font-size: medium;
+    }
+// FIN FOOTER

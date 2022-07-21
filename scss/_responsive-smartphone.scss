@@ -1,9 +1,9 @@
-@media (min-width: 392px) and (max-width: 730px) {
-  /*-----------HEADER-----------*/
-  .cloud-gaming {
+@media (min-width: 392px) and (max-width: 640px) {
+// HEADER
+    .cloud-gaming {
       display: none;
     }
-  .menu-nav ul { /*--BARRA DE NAVEGACION--*/
+  .menu-nav ul {
       display: none;
     }
   .color-nav-mobile {
@@ -12,25 +12,80 @@
   .sin-borde {
       border: none;
     }
-  .menu-mobile a {
+  .login {
+      display: none;
+    }
+  .carro {
+      display: none;
+    }
+  .busqueda-none {
+      display: none;
+    }
+  .barra-busqueda {
+      margin: 0;
+    & input {
+      width: 60%;
+      margin: 0;
+      border-color: var(--color-secundario);
+      }
+    }
+  .header-icons {
+    position: absolute;
+    right: 12vh;
+    top: 30px;
+    & div {
+      width: 80px;
+      }
+    }
+  .menu-mobile {
       display: flex;
       justify-content: center;
-      color: var(--color-secundario);
+      color: var(--color-primario);
       text-decoration: none;
       font-weight: bold;
-      font-size: 20px;
-      padding: 14px 0px 14px 0px;
+      font-size: large;
+      padding: 7px 0px 7px 0px;
+      margin: 0px 5px 0px 5px;
+      &:hover {
+        border-radius: 14px;
+        color: var(--color-secundario);
+        background-color: var(--color-primario);
+      }
+    }
+  #sub-menu {
+    display: flex;
+    justify-content: center;
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+    padding: 7px 0px 7px 0px;
+    &:hover {
+      border-radius: 14px;
+      color: var(--color-primario);
+      background-color: var(--color-secundario);
+      }
+    }
+  .dropdown-menu {
+    background-color: var(--color-secundario);
+    border: none;
+    border-radius: 15px;
+    margin: 10px 0px 2px 0px;
+    padding: 5px 0px 5px 0px;
+    }
+  .dropdown-toggle::after {
+    display: none;
     }
   .navbar-light .navbar-toggler-icon {
-      background-image: url(../images/icon/more.png); /*-----------CAMBIE ICONO DE HAMBURGUESA DEL MENU BOOTSTRAP------------------------------*/
+      background-image: url(../images/icon/more.png);
     }
-  /*-----------MAIN-----------*/
-
-  .titulo-flex { /*--TITULO MAIN--*/
-      display: flex;
-      margin: 0% 0% 0% 3%;
-      color: var(--color-secundario);
-      padding: 20px 0px 0px 0px;
+// FIN HEADER
+// MAIN
+  .titulo-flex {
+    display: flex;
+    margin: 0% 0% 0% 3%;
+    color: var(--color-secundario);
+    padding: 20px 0px 0px 0px;
     }
   .articulos-titulo {
       padding: 2px 0px 0px 0px;
@@ -44,41 +99,62 @@
   .menu-lat {
       display: none;
     }
-  .articulos { /*--CAJAS DE PUBLICACIONES--*/
+  .articulos {
       margin: 5px;
+      padding-bottom: 10px;
       width: 150px;
-      & a img {
+      .img-articulo img {
           width: 150px;
         }
     }
-  .descripcion a {
+  .descripcion {
       border-bottom: solid 10px;
       border-color: var(--color-primario);
-      padding: 5px;
+      font-size: 14px;
+      padding: 4px;
     }
   .precio {
-      font-size: x-large;
+      font-size: larger;
+    }
+  .cuotas {
+      font-size: 15px;
     }
   .ver-mas {
-      padding: 4px 2px 4px 2px;
-      margin-bottom: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      & a {
-          padding: 4px 0px 2px 0px;
-          font-size: 17px;
-        }
+      margin: auto;
+      & {
+        padding-top: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+      }
     }
-
-  /*-----------FOOTER-----------*/
+// FIN MAIN
+// iFRAMES ARTICULOS
+  #modal {
+    position: fixed;
+    left: 1vh;
+    width: 96%;
+    min-width: 100px;
+    }
+  .iframe {
+    height: 90vh;
+    top: 40px;
+    }
+  #cerrar-modal {
+    display: none;
+    + label {
+      top: 40px;}
+    }
+//FIN iFRAMES
+// FOOTER
   .padre1 {
-      flex-direction: column;
+    flex-direction: column;
+    transform: translateX(0px);
+    }
+  .espacio-m {
+    transform: translateX(40px);
     }
   .categorias {
       display: none;
-    }
-  .separacion {
-      margin: 10px;
     }
   .mobile {
       display: flex;
@@ -86,7 +162,8 @@
       margin: 0 auto;
       width: 100%;
     }
-  /*-----------CONTACTO-----------*/
+// FIN FOOTER
+// CONTACTO
   .articulos-contacto {
       width: 100%;
     }
@@ -105,8 +182,14 @@
       font-size: 15px;
       width: 80%;
     }
+// FIN CONTACTO
+// FAQ
   .articulos-faq {
       width: 85%;
       min-width: 200px;
     }
+  .marginbottom-faq {
+      margin-bottom: 20px;
+    }
 }
+// FIN FAQ
